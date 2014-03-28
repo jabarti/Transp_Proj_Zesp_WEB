@@ -1,0 +1,13 @@
+﻿<?php
+$dbhost = "";
+$dbuser	= "";
+$dbpass	= "";
+$dbname	= "";
+
+if (PHP_VERSION_ID<50500)
+{
+    $DBConn = mysql_connect($dbhost,$dbuser,$dbpass);// or die('Connection failed!');
+    mysql_select_db($dbname) or die('<br>Selection failed!');
+}else{
+    $DBConn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname) or die('<br>Selection failed!');
+}

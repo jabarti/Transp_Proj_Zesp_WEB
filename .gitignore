@@ -1,0 +1,13 @@
+*~
+*.exe
+*.[oa]
+*.eap
+*.mwb
+*.mwb.bak
+*.rar
+*.zip
+*.z7
+nbproject
+htdocs/DB_Connection.php
+ExternalResources/Oracle_modeler
+ExternalResources/Notes

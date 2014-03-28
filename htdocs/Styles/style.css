@@ -1,0 +1,260 @@
+/*@charset "utf-8";*/
+
+body {
+        /*background: url(backgrounds/logo.png) no-repeat top center fixed;*/ 
+
+	/*background: #EFDF95; */
+	background: white;
+	width: 900px; 
+	height: 500px;
+	margin-left:auto;
+	margin-right:auto; 
+	float: centre;
+	text-align: centre;
+	/*text-align: left;*/
+	}
+	
+	
+	
+a:link {color:#FF0000;}    /* unvisited link */
+a:visited {color:#00FF00;} /* visited link */
+a:hover {color:#FF00FF;}   /* mouse over link */
+a:active {color:#0000FF;}  /* selected link */
+
+ h1 {
+	background: white;
+	text-align: center;
+}
+
+
+#cleaner { clear: both; width: 100%; height: 20px; font-size: 0px;  }
+#yellow { color: yellow; }
+#red { color: red; }
+
+div#glowny {
+        position: relative;
+        /*top:150px;*/
+	background: lightgrey/*blue/*black*/;
+        opacity: 0.5;
+	width: 880px; 
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	float: right;
+	/*color: white;*/
+	}
+	
+div#glowny_wew {
+	background: lightcyan;
+	width: 50%; 
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	-moz-box-shadow: 0px 0px 6px #88a;
+	-webkit-box-shadow: 0px 0px 6px #88a;
+	box-shadow: 0px 0px 6px #88a; 
+	padding: 0px;
+	float: left;
+        display: block;
+	/*color: white;*/
+	}
+	
+div#glowny_index {
+	background: grey/*blue/*black*/;
+        top:450px;
+	width: 880px; 
+	height: auto;
+	padding: 10px;
+	float:right;
+	/*color: white;*/
+	}
+        
+div#LogInfo{
+         position: fixed;
+         bottom:10px;
+         right: 5px;
+         width: 200px;
+         min-height: 50px;
+         background: greenyellow;
+         font-size: 10px;
+         opacity: 0.3;
+         border: 1px solid #00cccc;
+         -moz-box-shadow: 0px 0px 6px #88a;
+	 -webkit-box-shadow: 0px 0px 6px #88a;
+	 box-shadow: 0px 0px 6px #88a; 
+        }
+        
+#footer {
+	background: blueviolet;
+        /*background: url(backgrounds/menu.png) no-repeat center center fixed;*/
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	font-weight: bold;
+	/*position: relative; height: 170px;*/
+}
+	
+	
+div#menu {
+	background: #3322E8;
+	float: left;
+	width: 175px; 
+	height: auto;
+	padding: 5px;
+	position: fixed;
+	left: 2px;
+	top: 5px;
+	}
+div#flip {
+	background: #CCCCCC/*yellow*/;
+	text-align: center; 
+	}
+
+div#panel {
+	/*visibility: hidden;*/
+	}	
+	
+div#normal {
+	background: #B51CFF;
+	float: left;
+	border: solid 1px red;
+	width: 200;
+	height: 250px;
+	padding: 5px;
+}
+
+div#normal2 {
+	background: blue;/*#B51CFF;*/
+	float: centre;
+	border: solid 1px red;
+	width: auto;
+	height: auto;
+	padding: 5px;
+}
+
+div#big {
+	background: #B51CFF;
+	float: right;
+	border-top: solid 1px red;
+	border-bottom: solid 1px red;
+	border-left: solid 1px red;
+	border-right: solid 1px red;
+	width: 413px;
+	height: 512px;
+}
+
+table#blackwhite{
+	font-style: white;
+	text-align: left;
+	color: white;
+}
+
+/* REJESTRACJE */
+
+/********** contact form **********/
+/*
+form { margin:0; padding:5px 10px;}
+
+form ol { margin:0; padding:0; list-style:none;}
+form li { margin:0; padding:0; background:none; border:none; display:block; clear:both; position:relative;  }
+form li.buttons { margin:5px 0 5px 0;}
+form label { margin:0; width:110px; display:block; padding:15px 0; color:#605f5f; font: normal 12px Arial, Helvetica, sans-serif; text-transform:capitalize; float:left;}
+form label span { color:#F00;}
+form input.text { width:200px; border:1px solid #e8e8e8; margin:10px 0; padding:5px 2px; height:16px; background:#fff; float:left; }
+form div.error { display:block; position:absolute; left:330px; top:16px; color:#C21216; font-family:Arial, Helvetica, sans-serif; font-size:11px;  }
+form textarea { width:410px; border:1px solid #e8e8e8; margin:10px 0; padding:2px; background:#fff; float:left;}
+//*/
+#ustawki { border: 1px solid; margin-left: auto; margin-right:auto; padding: 10px}
+#ustawki2 { border: 1px solid; margin-left: auto; margin-right:auto; font-size:10px}
+#ustawki2 td { width: 190px;}
+.error {
+	display:block; /*color: yellow; /**/color:#C21216/**/; font-family:Arial, Helvetica, sans-serif; font-size:11px;
+}
+
+.disabled {
+	/*background: grey; */color: red;font-weight:bold;
+}
+
+#main {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	/*border-left: 1px solid;
+	border-right: 1px solid;*/
+	border: 2px solid;
+}
+#main label {width: 170px;	text-align: center; font-weight: bold;}
+#main td {width: 170px;	text-align: left;}
+
+/* EDYCJE */
+#temp{ font-size: 10px; }
+
+#rejestr2 {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	/*border-left: 1px solid;
+	border-right: 1px solid;*/
+	border: 2px solid;
+}
+#rejestr2 td {width: 130px;	text-align: left;}
+#rejestr2 td input {width: 120px;	text-align: left;}
+
+/* REJESTRACJE */
+#rejestr {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	/*border-left: 1px solid;
+	border-right: 1px solid;*/
+	border: 2px solid;
+}
+
+#rejestr td {width: 130px;	text-align: left;}
+
+#register_buttons {	margin-left: 10px; margin-right: 10px; color: white; text-align: left; }
+#register_buttons td {	width: 200px; }
+
+#buttons { border: 2px solid blue; margin-left: auto; margin-right: auto; }
+#buttons th { color: yellow; }
+#buttons td { width: 130px; }
+
+#komunikat {
+	background: yellow;
+	color: black;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	border-style: solid;
+	border-radius: 5px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#komunikat_long {
+	background: yellow;
+	color: black;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	border-style: solid;
+	border-radius: 5px;
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#komunikat2 {
+	background: yellow;
+	color: black;
+	position: relative;
+	text-align: center;
+	font-weight: bold;
+	border-style: solid;
+	border-radius: 5px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}

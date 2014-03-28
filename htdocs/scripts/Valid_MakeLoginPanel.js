@@ -10,7 +10,7 @@
 window.onload = 											/*		REJESTRACJA FIRMA	 	*/
 function (){
     document.getElementById("MakeLogin").onsubmit = function(){
-        alert("Valid_MakeLogin.js");
+//        alert("Valid_MakeLogin.js");
         if(     czyWypelnione(this.uzytkownik)
             &&  isMinLength (this.uzytkownik, 4)                                // should be more then 8 
             &&  czyWypelnione(this.haslo1)

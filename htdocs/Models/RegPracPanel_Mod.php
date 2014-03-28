@@ -1,5 +1,4 @@
 <?php
-
 /* * **************************************************
  * Project:     Transport_Proj_Zesp
  * Filename:    RegPracPanel_Mod.php
@@ -7,15 +6,15 @@
  * Created:     2014-01-17
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
- * commit e5933246f001d0f4d742bc7e4f3ec581fc34d32d
- * Date:   Fri Mar 28 17:44:24 2014 +0100
+ * commit       e5933246f001d0f4d742bc7e4f3ec581fc34d32d
+ * Date:        Fri Mar 28 17:44:24 2014 +0100
  * ************************************************* */
 require_once "../common.inc.php";
-echo '<br>============== $_SESSION ============================<br>';
+echo '<br>'.__FILE__.'================$_SESSION=========================='.__LINE__.'<br>';
 DisplayArr($_SESSION);
-echo '<br>================$$POST==========================<br>';
+echo '<br>'.__FILE__.'================$_POST=========================='.__LINE__.'<br>';
 DisplayArr($_POST);
-echo '<br>================GET==========================<br>';
+echo '<br>'.__FILE__.'================$_GET=========================='.__LINE__.'<br>';
 DisplayArr($_GET);
 
 

@@ -1,5 +1,4 @@
 <?php
-
 /* * **************************************************
  * Project:     Transport_Proj_Zesp
  * Filename:    MakeLoginPanel_Mod.php
@@ -7,14 +6,14 @@
  * Created:     2014-01-14
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
- * commit e5933246f001d0f4d742bc7e4f3ec581fc34d32d
- * Date:   Fri Mar 28 17:44:24 2014 +0100
+ * commit       e5933246f001d0f4d742bc7e4f3ec581fc34d32d
+ * Date:        Fri Mar 28 17:44:24 2014 +0100
  * ************************************************* */
 require_once "../common.inc.php";
 
-echo '<br>============== $_SESSION ============================<br>';
+echo '<br>'.__FILE__.'================$_SESSION=========================='.__LINE__.'<br>';
 DisplayArr($_SESSION);
-echo '<br>================$$POST==========================<br>';
+echo '<br>'.__FILE__.'================$_POST=========================='.__LINE__.'<br>';
 DisplayArr($_POST);
 $login = $_POST['uzytkownik'];
 $upraw = $_POST['upraw'];
@@ -73,7 +72,7 @@ if (isset($_SESSION['RegOsCase'])){
                 echo '<br>SQL:'.$SQL;
                 mysql_query($SQL) or die('<br>===============<br>NIE udało sie ZMIENIĆ hasła<br>===============<br>');
                 $_SESSION['title'] = 'Przelogowanie | Re-Loggin';
-                ECHO "<br>POWINIEN IŚĆ SIE PRZELOGOWAC";
+                ECHO "<br>2 POWINIEN IŚĆ SIE PRZELOGOWAC";
 //                header("Location: ".HTTP_HTDOCS.'index.php?Main_view_name=login');
             echo '<br>===============================================================<br>';
             break;
@@ -110,20 +109,20 @@ if (isset($_SESSION['RegOsCase'])){
                     echo "<br>|1ERROR: ".$ex;
                 }
                 // Ponieważ to klient zapiszmy go jako klienta //
-                $SQL = sprintf('SELECT `ID_Klient` FROM `klient` WHERE `osoba_ID_Osoba` = '.$ID_Osoba.';');
+                $SQL = sprintf('SELECT `ID_Klient` FROM `Klient` WHERE `osoba_ID_Osoba` = '.$ID_Osoba.';');
                 if (mysql_result(mysql_query($SQL),0)){
                     echo '<br>JEST JUŻ TAKI KLIENT!!!';
                 }else{
                     echo '<br>NIE MA TAKIego KLIENTa, zapisuje!!!';
-                    $SQL = sprintf('INSERT INTO `klient`(`osoba_ID_Osoba`) VALUES ("'.$ID_Osoba.'");');
+                    $SQL = sprintf('INSERT INTO `Klient`(`osoba_ID_Osoba`) VALUES ("'.$ID_Osoba.'");');
                     echo '<br>SQL: '.$SQL;
-                    mysql_query($SQL) or die ('<br>===============<br>NIE udało sie UTWORZYĆ Klienta why???<br>===============<br>');
+                    mysql_query($SQL) or die ('<br>===============<br>1 NIE udało sie UTWORZYĆ Klienta why???<br>===============<br>');
                 }
             }else{
-                echo '<br>COŚ NIE TAK!!!';
+                echo '<br>1COŚ NIE TAK!!!';
             }
             $_SESSION['title'] = 'Przelogowanie | Re-Loggin';
-            ECHO "<br>POWINIEN IŚĆ SIE PRZELOGOWAC";
+            ECHO "<br>3 POWINIEN IŚĆ SIE PRZELOGOWAC";
 //            header("Location: ".HTTP_HTDOCS.'index.php?Main_view_name=login');  // DZIAŁA!!!!
             
             echo '<br>===============================================================<br>';
@@ -171,11 +170,19 @@ if (isset($_SESSION['RegOsCase'])){
             //===========================================
             // $passOLD jest równe fikcyjnemu haslu z MakeLoginPanel.php i != $passNEW
             echo $passOLD;
-            if ($passOLD == sha1('123456789WqX%')) echo 'OK';
+            if ($passOLD == sha1('123456789WqX%')){
+                echo ' / OK';
+            } else {
+                echo ' / NO OK';
+            }
             echo '<br>'.$passNEW;
-            if ($passNEW == sha1('12345')) echo 'OK';
+            if ($passNEW == sha1('12345')){
+                echo ' / OK';
+            } else {
+                echo ' / NO OK';
+            }
             
-            if ($passOLD == sha1('123456789WqX%') && $passNEW != sha1('12345')){
+            if ($passOLD == sha1('123456789WqX%') && $passNEW == sha1('12345')){
                 
                 echo '<br>//******************************<br>
                 Tymczasowo ustalone hasło na sztywno wpisywane do BD!!!!!! usunąć!!!!<br>//******************************';
@@ -187,23 +194,24 @@ if (isset($_SESSION['RegOsCase'])){
                 $SQL = sprintf('INSERT INTO `Login`(`ID_Osoba`, `login`, `Password`, `Uprawnienie`, `lastLogin`) 
                         VALUES ("'.$ID_Osoba.'", "'.$login.'", "'.$passNEW.'", "'.$upraw.'", "'.time().'");');
                 echo '<br>SQL:'.$SQL;
-                mysql_query($SQL) or die('<br>===============<br>3NIE udało sie UTWORZYĆ hasła<br>===============<br>');
+                mysql_query($SQL) or die('<br>===============<br>3 NIE udało sie UTWORZYĆ hasła<br>===============<br>');
     
                 // Ponieważ to klient zapiszmy go jako klienta //
-                $SQL = sprintf('SELECT `ID_Klient` FROM `klient` WHERE `osoba_ID_Osoba` = '.$ID_Osoba.';');
+                $SQL = sprintf('SELECT `ID_Klient` FROM `Klient` WHERE `osoba_ID_Osoba` = '.$ID_Osoba.';');
                 if (mysql_result(mysql_query($SQL),0)){
                     echo '<br>JEST JUŻ TAKI KLIENT!!!';
                 }else{
                     echo '<br>NIE MA TAKIego KLIENTa, zapisuje!!!';
-                    $SQL = sprintf('INSERT INTO `klient`(`osoba_ID_Osoba`) VALUES ("'.$ID_Osoba.'");');
-                    mysql_query($SQL) or die ('<br>===============<br>NIE udało sie UTWORZYĆ Klienta why???<br>===============<br>');
+                    $SQL = sprintf('INSERT INTO `Klient`(`osoba_ID_Osoba`) VALUES ("'.$ID_Osoba.'");');
+                    echo '<br>'.__FILE__.__LINE__."SQL: ".$SQL;
+                    mysql_query($SQL) or die ('<br>===============<br>2 NIE udało sie UTWORZYĆ Klienta why???<br>===============<br>');
                 }
             }else{
-                echo '<br>COŚ NIE TAK!!!';
+                echo '<br>2COŚ NIE TAK!!!';
             }
             $_SESSION['title'] = 'Przelogowanie | Re-Loggin';
-            ECHO "<br>POWINIEN IŚĆ SIE PRZELOGOWAC";
-//            header("Location: ".HTTP_HTDOCS.'index.php?Main_view_name=login');  // DZIAŁA!!!!
+            ECHO "<br>1 POWINIEN IŚĆ SIE PRZELOGOWAC";
+            header("Location: ".HTTP_HTDOCS.'index.php?Main_view_name=login');  // DZIAŁA!!!!
 
             //===========================================
             echo '<br>===============================================================<br>';

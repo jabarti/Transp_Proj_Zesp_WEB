@@ -40,17 +40,17 @@ if (!defined('DIR_SEP'))
 
 //=============================================================================
 //ECHO '<BR><BR>// HTTP Directories  //<BR><BR>';
-echo __FILE__."<br>";
+//echo __FILE__."<br>";
 //explode("\\",__FILE__);
-echo "<br>";
+//echo "<br>";
 $arrTRY = explode(DIR_SEP,__FILE__);
 //var_dump($arr);
 //echo count($arr);
-echo $arrTRY[count($arrTRY)-1];
+//echo $arrTRY[count($arrTRY)-1];
 
 $arr = explode(DIR_SEP, $_SERVER['PHP_SELF']);
 $arr2 = explode(DIR_SEP, $_SERVER['PHP_SELF']);
-echo '<br>'.$arr[1];
+//echo '<br>'.$arr[1];
 //echo '<br>'.$arr2[2].'<br>';
 if (!defined('ROOT'))    define('ROOT', 'http://'.$_SERVER['HTTP_HOST']);
 if (!defined('PRO_NAME'))    define('PRO_NAME', $arr[1]);
@@ -60,7 +60,7 @@ if (!defined('HTTP_STYLES_PATH'))    define('HTTP_STYLES_PATH', HTTP_HTDOCS.'Sty
 if (!defined('HTTP_BACKGROUND_PATH'))    define('HTTP_BACKGROUND_PATH', HTTP_STYLES_PATH.'background'.DIR_SEP);
 if (!defined('HTTP_VIEWS_PATH'))    define('HTTP_VIEWS_PATH', HTTP_HTDOCS.'Views'.DIR_SEP);
 if (!defined('HTTP_STABLEVIEWS_PATH'))    define('HTTP_STABLEVIEWS_PATH', HTTP_VIEWS_PATH.'StableViews'.DIR_SEP);
-if (!defined('HTTP_PICTURES_PATH'))    define('HTTP_PICTURES_PATH', HTTP_HTDOCS.'Pictures'.DIR_SEP);
+if (!defined('HTTP_PICTURES_PATH'))    define('HTTP_PICTURES_PATH', HTTP_HTDOCS.'pictures'.DIR_SEP);
 if (!defined('HTTP_SCRIPTS_PATH'))    define('HTTP_SCRIPTS_PATH', HTTP_HTDOCS.'scripts'.DIR_SEP);
 if (!defined('HTTP_ROOT_PATH'))    define('HTTP_ROOT_PATH', DIR_SEP.PRO_NAME.DIR_SEP);
 if (!defined('HTTP_INCLUDES_PATH'))    define('HTTP_INCLUDES_PATH', HTTP_ROOT_PATH.'Includes'.DIR_SEP);
@@ -98,7 +98,7 @@ if (!defined('HDD_MODELS_PATH'))    define('HDD_MODELS_PATH', HDD_PATH  . 'Model
 if (!defined('HDD_STYLES_PATH'))    define('HDD_STYLES_PATH', HDD_PATH  . 'Styles'. DIRECTORY_SEPARATOR);
 if (!defined('HDD_VIEWS_PATH'))    define('HDD_VIEWS_PATH', HDD_PATH  . 'Views'. DIRECTORY_SEPARATOR);
 if (!defined('HDD_STABLEVIEWS_PATH'))    define('HDD_STABLEVIEWS_PATH', HDD_VIEWS_PATH  . 'StableViews'. DIRECTORY_SEPARATOR);
-if (!defined('HDD_PICTURES_PATH'))    define('HDD_PICTURES_PATH', HDD_PATH  . 'Pictures'. DIRECTORY_SEPARATOR);
+if (!defined('HDD_PICTURES_PATH'))    define('HDD_PICTURES_PATH', HDD_PATH  . 'pictures'. DIRECTORY_SEPARATOR);
 if (!defined('HDD_SCRIPT_PATH'))    define('HDD_SCRIPT_PATH', HDD_PATH  . 'scripts'. DIRECTORY_SEPARATOR);
 
 //echo 'linia: '.__LINE__.' HDD_SCRIPT_PATH: '.HDD_SCRIPT_PATH.'<br>';
@@ -121,4 +121,4 @@ if (!defined('HDD_SCRIPT_PATH'))    define('HDD_SCRIPT_PATH', HDD_PATH  . 'scrip
 //echo '<br>$_SERVER[\'PHP_SELF\']: '.$_SERVER['PHP_SELF'];
 //echo '<br>__FILE__: '.__FILE__;
 /**/
-?>
+

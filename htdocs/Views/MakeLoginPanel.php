@@ -1,5 +1,4 @@
 <?php
-
 /* * **************************************************
  * Project:     Transport_Proj_Zesp
  * Filename:    MakeLoginPanel.php
@@ -7,11 +6,11 @@
  * Created:     2014-01-14
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
- * commit e5933246f001d0f4d742bc7e4f3ec581fc34d32d
- * Date:   Fri Mar 28 17:44:24 2014 +0100
+ * commit       e5933246f001d0f4d742bc7e4f3ec581fc34d32d
+ * Date:        Fri Mar 28 17:44:24 2014 +0100
  * ************************************************* */
 //require_once "common.inc.php";
-echo '<br>================GET==========================<br>';
+echo '<br>'.__FILE__.'================GET=========================='.__LINE__.'<br>';
 DisplayArr($_GET);
 
 
@@ -27,7 +26,7 @@ if (isset($_GET["isFirstLog"])){
     $NewPass1 = $NewPass2 = 'haslo'; // remove in WORK version
 }
 
-if ($isFirstLog == 0){
+if ($isFirstLog == 0){   
     echo '<br>KROK 0 isFirstLog == 0';
     if (isset($_SESSION['userLogin'])){         // Utworzona sesja userlogin - tzn jest zalogowany pracownik!!! może zarej. klienta albo innego pracownika
         echo '<br>KROK 1 isFirstLog == 0 && SESS userLog SET<br>Zmienia SWOJE HASŁO!!!';

@@ -10,12 +10,10 @@ if (isset($_SESSION['count'])){
     $_SESSION['count']++;
 }
 
-
 echo '<div id="glowny_index">';
 echo ('$Main_view_name: '.$Main_view_name);
 include LoadMainView($Main_view_name);
 echo '</div>';
-
 
 /*   
 echo '<br>linia: '.__LINE__.' =============================================<br>';

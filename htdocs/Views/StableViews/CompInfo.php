@@ -10,7 +10,7 @@
  * Date:   Fri Mar 28 17:44:24 2014 +0100
  */
 ?>
-<h1>Company Info</h1>
+<h1><?php echo t("Informacja o firmie")?></h1>
 <p>[32] Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque 
     laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto 
     beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur 

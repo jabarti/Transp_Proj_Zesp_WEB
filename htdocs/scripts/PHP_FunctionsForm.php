@@ -18,11 +18,11 @@ function Form($id, $file, $title, $name, $place, $method='post'){
         case 'head':
             echo '<form id="'.$id.'" action="'.$file.'" method="'.$method.'">
                     <table>
-                        <th colspan="2">'.$title.'</th>';
+                        <th colspan="2">'.t($title).'</th>';
         break;
         case 'foot':
             echo '          <td></td>
-                            <td style="text-align: right;"><input type="submit" name="'.$name.'" value="Wyślij"></td>
+                            <td style="text-align: right;"><input type="submit" name="'.$name.'" value="'.t("Wyślij").'"></td>
                         </tr>
                     </table>
                 </form>';
@@ -45,7 +45,7 @@ function CreateTextForm($array, $checkerror = true, $readonly=false, $sess=true)
         }
         if ($checkerror){
             echo'<tr>
-                    <td><span id="red">*</span>'.$key.': </td>
+                    <td><span id="red">*</span>'.t($key).': </td>
                     <td><input type="text" id="'.$key.'" name="'.$key.'" value="'.$value.'" '.$readonly.' "></input> </td>
                 </tr>
                 <tr>
@@ -53,7 +53,7 @@ function CreateTextForm($array, $checkerror = true, $readonly=false, $sess=true)
                 </tr>';
         }else{
             echo'<tr>
-                    <td>'.$key.': </td>
+                    <td>'.t($key).': </td>
                     <td><input type="text" id="'.$key.'" name="'.$key.'" value="'.$value.'" '.$readonly.' "></input> </td>
                 </tr>                
                 <tr>
@@ -84,7 +84,7 @@ function CreateTextareaForm($array, $cols, $rows){
 //            unset($_SESSION[$key]);
         }
         echo'<tr>
-                <td>'.$key.'</td>
+                <td>'.t($key).'</td>
                 <td><textarea id="'.$key.'"   name="'.$key.'"   cols="'.$cols.'" rows="'.$rows.'">'.$value.'</textarea></td>
              </tr>';
     }
@@ -100,10 +100,10 @@ function CreateTextareaForm($array, $cols, $rows){
 //            </select></td>
 //	</tr>
 function CreateOptionForm($name, $array){
-    echo'<td>'.$name.': </td>
+    echo'<td>'.t($name).': </td>
          <td><select name="'.$name.'">';
     foreach ($array as $key => $val){
-        echo'<option>'.$val.'</option>';
+        echo'<option>'.t($val).'</option>';
     }
     echo'   </select></td>
 	</tr>';

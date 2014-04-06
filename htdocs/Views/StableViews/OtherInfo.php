@@ -10,7 +10,7 @@
  * Date:   Fri Mar 28 17:44:24 2014 +0100
  */
 ?>
-<h1> Other Info </h1>
+<h1><?php echo t("Inne informacje")?></h1>
 <p>
     [33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum 
     deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, 

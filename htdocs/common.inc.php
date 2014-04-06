@@ -58,6 +58,16 @@ if (isset($_SESSION['user'])){
 }
 
     require 'DB_Connection.php';
+    
+    if (isset($_GET['lang'])||isset($_SESSION['lang'])){
+       if(isset($_GET['lang']))
+           $_SESSION['lang'] = $_GET['lang'];
+       } else {
+           $_SESSION['lang'] = "pl";
+    }
+
+    include 'Translations/translacjon.php';
+            
 //    require_once HDD_STABLEVIEWS_PATH.'header.php';
 //    require HDD_STABLEVIEWS_PATH.'buttons.php';
     require_once HDD_SCRIPT_PATH.'PHP_Functions.php';
@@ -93,15 +103,15 @@ echo '</div>';
 
 if(Logged()){
     echo '<div id="LogInfo">
-            <h1>ZALOGOWANY</h1>
-            <p class="red">User: <b>'.$_SESSION['user'].'</b></p>
-            <p class="red">Rola: <b>'.$_SESSION['upraw_user'].'</b></p>
+            <h1>'.t("ZALOGOWANY").'</h1>
+            <p class="red">'.t("Użytkownik").': <b>'.$_SESSION['user'].'</b></p>
+            <p class="red">'.t("Rola").': <b>'.$_SESSION['upraw_user'].'</b></p>
           </div>';
 }else{
-    echo '<div id="LogInfo"><h1>NIE ZALOGOWANY</h1></div>';
+    echo '<div id="LogInfo"><h1>'.t('NIE ZALOGOWANY').'</h1></div>';
 //    session_destroy();
 }
         require HDD_STABLEVIEWS_PATH.'buttons.php';
-
+        
 //    echo "<br>END common.inc.php<br>=================================<br>";
 ?>

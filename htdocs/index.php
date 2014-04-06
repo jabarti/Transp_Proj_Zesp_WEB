@@ -4,6 +4,7 @@
  * Date:        Fri Mar 28 23:42:59 2014 +0100
  */
 require_once "common.inc.php";
+include 'Translations/flag.php';
 //require_once HDD_STABLEVIEWS_PATH.'header.php';
 
 if (isset($_SESSION['count'])){

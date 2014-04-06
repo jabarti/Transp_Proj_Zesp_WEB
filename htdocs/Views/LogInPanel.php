@@ -47,7 +47,7 @@ if ($_SESSION['wrongLogg'] < 3 && !isset($_COOKIE['przerwa'])){
 <form action='<?php echo HTTP_MODELS_PATH."LogInPanel_Mod.php"; ?>' method="POST">       
     <table>
         <tr>
-            <td>Użytkownik/Login:</td>
+            <td><?php echo t('Użytkownik/Login') ?>:</td>
             <!--td><input type="text" name="uzytkownik"></td--> <!-- To MA BYć w wersji WORK!!!!!!!!!!!!!!!!!!!!!!!!! -->
             <td><select name="uzytkownik" >	 <!-- To jest absolutnie niepoprawne i ma by� USUNIETE!!!! -->
 <?php
@@ -60,7 +60,7 @@ if ($_SESSION['wrongLogg'] < 3 && !isset($_COOKIE['przerwa'])){
             </select></td>
 	</tr>
 	<tr>
-            <td>Hasło:</td>
+            <td><?php echo t('Hasło') ?>:</td>
             <!--  Remove 'haslo" in Workable!!!!-->
             <td><input type="password" name="pass" value="haslo"></td>
             <!--</td> <WORKABLE>-->
@@ -71,11 +71,11 @@ if ($_SESSION['wrongLogg'] < 3 && !isset($_COOKIE['przerwa'])){
             <td colspan="2"><input type="hidden" name="lastLogin" value=" <?php echo date('Y-m-d, H:i:s'); ?>" readonly/><td>
         </tr>
     </table>
-    <input type="submit" value="Zaloguj"/>
+    <input type="submit" value="<?php echo t('Zaloguj') ?>"/>
 </form>
 <?php                // SIMPLE 1
 } else { 
-    echo '<p style ="color:yellow"><b>Musisz poczekać 10sek na kolejne logowanie</b></p?';
+    echo '<p style ="color:yellow"><b>'.t('Musisz poczekać 10sek na kolejne logowanie').'</b></p?';
     unset($_SESSION['wrongLogg']);
 }
 

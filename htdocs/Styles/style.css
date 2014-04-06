@@ -65,6 +65,15 @@ div#glowny_wew {
 	/*color: white;*/
 	}
 	
+/*div#glowny_index {
+	background: greyblue/*black;
+        top:450px;
+	width: 880px; 
+	height: auto;
+	padding: 10px;
+	float:right;
+	color: white;
+	}*/
 div#glowny_index {
 	background: grey/*blue/*black*/;
         top:450px;
@@ -72,8 +81,48 @@ div#glowny_index {
 	height: auto;
 	padding: 10px;
 	float:right;
+        margin-left: auto;
+        right: auto;
+	/*color: white;*/
+}
+
+div#glowny_index_translation {
+    position: relative;
+	background: grey/*blue/*black*/;
+        top:20px;
+        left: -80px;
+	width: 1050px; 
+	height: auto;
+	padding: 10px;
+	float:left;
+        z-index:-1;
+/*        margin-left: auto;
+        margin-right: 450px;*/
 	/*color: white;*/
 	}
+        
+div.flag {
+    background-color: silver;
+    position: fixed;
+    bottom:10px;
+    left:5px;
+    padding: 2px;
+    border: 1px solid #263666;  
+}
+
+div.transbutton {
+    position: fixed;
+    bottom:60px;
+    left:5px;
+    padding: 2px;
+    border: 1px solid #263666;
+}
+
+div.flag a{
+    width: 100px;
+    height: 30px;
+    /*border: 1px solid black;*/
+}
         
 div#LogInfo{
          position: fixed;

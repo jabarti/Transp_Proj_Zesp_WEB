@@ -50,10 +50,9 @@
         <title><?php echo $title ?></title>
         <meta charset="utf-8">
         <?php
-echo '//******************************<br>
-Tymczasowo ustalone hasło na sztywno wpisywane do BD!!!!!! usunąć!!!!<br>
-MakeLoginPanel.php line 56<br>
-//******************************';
+echo '//******************************<br>';
+echo t("Tymczasowo ustalone hasło na sztywno wpisywane do BD!!!!!! usunąć!!!!");
+echo '<br>MakeLoginPanel.php line 56<br>//******************************';
         ?>
     </head>
     <body>

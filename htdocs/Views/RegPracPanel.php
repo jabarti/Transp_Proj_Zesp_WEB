@@ -12,7 +12,7 @@
  * ************************************************* */
 //require_once "../common.inc.php";
 
-echo 'jestem w RegPracPanel.php'; 
+//echo 'jestem w RegPracPanel.php'; 
 
 if (isset($_SESSION)){
     DisplayArr($_SESSION);
@@ -32,7 +32,7 @@ $arrFormCont = array(   'data_zwolnienia' => '',
 $arrStanOption = array('Admin','Manager', 'Spedytor', 'Kierowca');
  
 
-Form('RegisterPrac', 'RegPracPanel_Mod.php', 'Formularz rejestracyjny', $SESSFormName, 'head');
+Form('RegisterPrac', 'RegPracPanel_Mod.php', t('Formularz rejestracyjny'), $SESSFormName, 'head');
 CreateHiddenTextForm(array('ID_Pracownik'=>''));
 CreateOptionForm('Stanowisko', $arrStanOption);
 CreateTextForm($arrFormContERR);
@@ -41,7 +41,7 @@ CreateTextForm($arrFormContERR);
 <?php
 CreateTextForm($arrFormCont, false);
 CreateHiddenTextForm(array('osoba_ID_Osoba'=>$id_os));
-Form('RegisterPrac', 'RegPracPanel_Mod.php', 'Formularz rejestracyjny', $SESSFormName, 'foot');
+Form('RegisterPrac', 'RegPracPanel_Mod.php', t('Formularz rejestracyjny'), $SESSFormName, 'foot');
 
 if (isset($_SESSION[$SESSFormName.'RES'])){
     if($_SESSION[$SESSFormName.'RES']){

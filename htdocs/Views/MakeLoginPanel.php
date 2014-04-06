@@ -58,10 +58,10 @@ if ($isFirstLog == 0){
     echo '<br>KROK 3 isFirstLog == 1';
     if (isset($_SESSION['userLogin'])){
         if ($_SESSION['upraw'] == 'Klient'){
-            echo '<br> ************TO KLIENT';
+            echo '<br> ************'.t("TO KLIENT");
             $_SESSION['RegOsCase'] = 3;
-            echo '<br> **************TO nie KLIENT';
-            echo '<br>KROK 3a isFirstLog == 1 && SESS userLog SET<br>Nowy KLIENT - hasło 12345';
+            echo '<br> **************'.t('TO nie KLIENT');
+            echo '<br>KROK 3a isFirstLog == 1 && SESS userLog SET<br>'.t('Nowy KLIENT - hasło').' 12345';
             $login = '';
             $type = 'hidden';
             $readonly = '';
@@ -72,9 +72,9 @@ if ($isFirstLog == 0){
                     <td colspan="2"><input type="hidden" id="upraw" name="upraw" value="Klient" ></input></td>
                 </tr>';
         }else{
-            echo '<br> **************TO nie KLIENT';
+            echo '<br> **************'.t('TO nie KLIENT');
             $_SESSION['RegOsCase'] = 4;
-            echo '<br>KROK 3b isFirstLog == 1 && SESS userLog SET<br>Nowy Pracownik - hasło 12345';
+            echo '<br>KROK 3b isFirstLog == 1 && SESS userLog SET<br>'.t('Nowy PRACOWNIK - hasło').' 12345';
             $login = '';
             $type = 'hidden';
             $readonly = '';
@@ -155,28 +155,28 @@ echo '
 <form id="MakeLogin" action='.$Path.' method="POST">       
     <table>
         <tr>
-            <td>Użytkownik/Login:</td>
+            <td>'.t("Użytkownik/Login").':</td>
             <td><input type="text" id="uzytkownik" name="uzytkownik" '.$readonly.' value='.$login.'></td>
 	</tr>
         <tr>
             <td colspan="2"><div id="erroruzytkownik" class="error"></div></td>
 	</tr>
         <tr>
-            <td>Stare hasło:</td>
+            <td>'.t("Stare hasło").':</td>
             <td><input type="'.$type.'" id="haslo1" name="haslo1" value="'.$OldPass.'"></td>
 	</tr>
         <tr>
             <td colspan="2"><div  id="errorhaslo1" class="error"></div></td>
 	</tr>
 	<tr>
-            <td>Utwórz hasło:</td>
+            <td>'.t("Utwórz hasło").':</td>
             <td><input type="password" id="haslo2" name="haslo2" '.$readonly2.' value="'.$NewPass1.'"></td>
 	</tr>
         <tr>
             <td colspan="2"><div id="errorhaslo2" class="error"></div></td>
 	</tr>
         <tr>
-            <td>Powtórz hasło:</td>
+            <td>'.t("Powtórz hasło").':</td>
             <td><input type="password" id="haslo3" name="haslo3" '.$readonly2.' value="'.$NewPass2.'"></td>
 	</tr>
         <tr>
@@ -184,7 +184,7 @@ echo '
 	</tr>
         '.$upraw.'
     </table>
-    <input type="submit" value="Zaloguj"/>
+    <input type="submit" value="'.t("Zaloguj").'"/>
 </form>
 ';
   

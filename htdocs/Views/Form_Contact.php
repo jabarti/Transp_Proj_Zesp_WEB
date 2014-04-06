@@ -9,7 +9,9 @@
  * Date:   Fri Mar 28 17:44:24 2014 +0100
  ***********************************************/
 $SESSFormName = 'ContactForm';
-Form('Contact', 'Form_Contact_Mod.php', 'Formularz zgłoszeniowy', 'ContactForm', 'head');
+//$temp = t('Formularz zgłoszeniowy');
+Form('Contact', 'Form_Contact_Mod.php', t('Formularz zgłoszeniowy') , 'ContactForm', 'head');
+//Form('Contact', 'Form_Contact_Mod.php', 'Formularz zgłoszeniowy' , 'ContactForm', 'head');
 CreateTextForm($arrFormContUR, false, true);
 CreateTextForm($arrFormCont);
 CreateHiddenTextForm($arrFormContHidd);
@@ -20,15 +22,15 @@ CreateTextareaForm($arrFormContTArea, 25, 5);
             <td colspan="2"><input type="hidden" name="regData" value=" <?php echo date('Y-m-d, H:i:s'); ?>" readonly/><td>
         </tr>
 <?php
-Form('Contact', 'Form_Contact_Mod.php', 'Formularz zgłoszeniowy', $SESSFormName, 'foot');
+Form('Contact', 'Form_Contact_Mod.php', t('Formularz zgłoszeniowy'), $SESSFormName, 'foot');
 if (isset($_SESSION[$SESSFormName.'RES'])){
     if($_SESSION[$SESSFormName.'RES']){
-        echo '<p class="yellow"><b>Formularz skutecznie wysłany.</b></p>';
+        echo '<p class="yellow"><b>'.t("Formularz skutecznie wysłany").'</b></p>';
     }else{
-        echo '<p class="red"><b>ERROR Nie udało się skutecznie wysłać formularza!!!</b></p>';
+        echo '<p class="red"><b>'.t("ERROR Nie udało się skutecznie wysłać formularza").'!!!</b></p>';
     }
     unset($_SESSION[$SESSFormName.'RES']);
 }else{
-    echo 'Formularz nie wysłany';
+    echo t('Formularz nie wysłany');
 }
 ?>        

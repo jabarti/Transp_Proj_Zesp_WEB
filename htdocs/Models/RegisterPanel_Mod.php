@@ -16,7 +16,8 @@ $whereGo = '';
 if (isset($_POST['RegisterForm'])){
     DisplayArr($_POST);
     
-        if($_POST['RegisterForm']=='Wyślij'){
+        if($_POST['RegisterForm']==t('Wyślij')){
+            echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
             echo('<br>'.$_POST['RegisterForm']);
             unset($_POST['RegisterForm']);
         }
@@ -45,13 +46,13 @@ try{
      echo '<br>===============================================$whereGo: '.$whereGo;
  echo '<br>HERE:'.__LINE__.'<br>';    
 switch ($whereGo){
-    case 'Pracownik':
+    case t('Pracownik'):
         echo '<br>Go to PRACOWNIK';
 //          header("Location: ".HTTP_VIEWS_PATH.'RegPracPanel.php');
             header("Location: ".HTTP_HTDOCS.'index.php?Main_view_name=regPrac');
         break;
     
-    case 'Klient':
+    case t('Klient'):
         echo '<br>Go to MAKE LOGIN PANEL for klient';
             $_SESSION['upraw'] = 'Klient';
 //          header("Location: ".HTTP_VIEWS_PATH.'RegKlienPanel.php');

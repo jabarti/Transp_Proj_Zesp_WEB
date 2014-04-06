@@ -22,27 +22,28 @@ if (!isset($_GET['Main_view_name'])){
 
 switch ($Main_view_name){
         case 'main':
-            $title = 'Main | Główna';
+            $title = t("Strona Główna");
         break;
     
         case 'login':
-            $title = 'Login | Logowanie';
+            $title = t('Logowanie');
         break;
     
         case 'register':
-            $title = 'Register | Rejestracja';
+            $title = t('Rejestracja');
         break;    
     
         case 'MakeLogin':
-            $title = 'Login/Hasło | Login/Password';
+            $title = t('Login/Hasło');// | Login/Password';
         break; 
     
         case 'regPrac': 
-            $title = 'Rejestracja Pracownika | Worker Registration';
+            $title = t('Rejestracja Pracownika');// | Worker Registration';
         break;     
     
         default:
-            $title = 'Main | Główna || Default';
+            $title = t("Strona Główna");
+//            $title = t("Główna strona Proj Zesp");
         break; 
     }
 ?>

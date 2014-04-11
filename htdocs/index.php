@@ -12,7 +12,7 @@ if (isset($_SESSION['count'])){
 }
 
 echo '<div id="glowny_index">';
-echo ('$Main_view_name: '.$Main_view_name);
+//echo ('$Main_view_name: '.$Main_view_name);
 include LoadMainView($Main_view_name);
 echo '</div>';
 

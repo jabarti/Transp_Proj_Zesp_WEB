@@ -9,17 +9,29 @@
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
 //echo session_id(); 
-if($chang == 1){
-?>
-<div class=transbutton><button onclick="window.history.back()"><?php echo t("Cofnij")?></button><br> 
-<button onclick="window.location.href='../index.php'"><?php echo t("Powrót do")?> index</button></div> 
-<?php
-$chang = 0;
-}else{
-?>
-    <div class=transbutton><button onclick="location.href='translation_interface.php'"><?php echo t("Translacje")?></button></div> 
-<?php
+if (isset($_GET['admin']) || isset($_SESSION['admin'])){
+    
+//    echo 'GET: ';var_dump($_GET);
+//    echo '<br>SESSION: ';var_dump($_SESSION);
+    if (!isset($_SESSION['admin']) || $_GET['admin'] == 'logout' || $_SESSION['admin'] == 'logout')
+        $_SESSION['admin'] = $_GET['admin']; 
+    
+    if($_GET['admin'] == 'bartek' || $_SESSION['admin']== 'bartek'){
+               
+        if($chang == 1){
+        ?>
+            <div class=transbutton><button onclick="window.history.back()"><?php echo t("Cofnij")?></button><br> 
+            <button onclick="window.location.href='../index.php'"><?php echo t("Powrót do")?> index</button></div> 
+        <?php
+            $chang = 0;
+        }else{
+        ?>
+            <div class=transbutton><button onclick="location.href='translation_interface.php'"><?php echo t("Translacje")?></button></div> 
+        <?php
+        }
+    }
 }
+
 if(isset($_SESSION['lang'])){
     switch ($_SESSION['lang']){
         case 'pl':

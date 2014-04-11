@@ -86,20 +86,6 @@ div#glowny_index {
 	/*color: white;*/
 }
 
-div#glowny_index_translation {
-    position: relative;
-	background: grey/*blue/*black*/;
-        top:20px;
-        left: -80px;
-	width: 1050px; 
-	height: auto;
-	padding: 10px;
-	float:left;
-        z-index:-1;
-/*        margin-left: auto;
-        margin-right: 450px;*/
-	/*color: white;*/
-	}
         
 div.flag {
     background-color: silver;

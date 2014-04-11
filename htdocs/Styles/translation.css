@@ -1,0 +1,71 @@
+
+/* 
+    Created on : 2014-04-03, 21:38:21
+    Author     : Bartek M. Lewiński
+*/
+/* Style dla /Translations  - org w translations.css */ 
+div#glowny_index_translation {
+    position: relative;
+	background: grey/*blue/*black*/;
+        top:10px;
+        left: -100px;
+	width: 1020px; 
+	height: auto;
+	padding: 10px;
+	float:left;
+        z-index:99;
+
+/*        margin-left: auto;
+        margin-right: 450px;*/
+	/*color: white;*/
+	}
+div.flag {
+    background-color: silver;
+    position: fixed;
+    bottom:10px;
+    left:5px;
+    padding: 2px;
+    border: 1px solid #263666;
+}
+
+#langchoser {
+    /*background-color: #FDD700;*/
+    width: 200px;
+    float: left;
+}
+
+#zawart {
+    /*background-color: chartreuse;*/
+    width: 200px;
+    float: left;
+}
+
+#szukacz {
+    /*background-color: chocolate;*/
+    width: 250px;
+    float: right;
+}
+
+div.transbutton {
+    position: fixed;
+    bottom:60px;
+    left:5px;
+    padding: 2px;
+    border: 1px solid #263666;
+}
+
+div.transbutton2 {
+    position: fixed;
+    bottom:60px;
+    left:120px;
+    padding: 2px;
+    border: 1px solid #263666;
+}
+
+div.flag a{
+    width: 100px;
+    height: 30px;
+    /*border: 1px solid black;*/
+}
+/*  KONIEC CSS dla /Translations*/
+

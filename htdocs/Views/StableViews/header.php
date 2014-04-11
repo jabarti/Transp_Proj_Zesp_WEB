@@ -46,6 +46,7 @@
 	<!--<link rel="Stylesheet" type="text/css" href="<?php echo HTTP_STYLES_PATH.'reset.css'?>" />-->
 	<link rel="Stylesheet" type="text/css" href="<?php echo HTTP_STYLES_PATH.'style.css'?>" />
 	<link rel="Stylesheet" type="text/css" href="<?php echo HTTP_STYLES_PATH.'guziki.css'?>" />
+	<link rel="Stylesheet" type="text/css" href="<?php echo HTTP_STYLES_PATH.'translation.css'?>" />
         
         <title><?php echo $title ?></title>
         <meta charset="utf-8">

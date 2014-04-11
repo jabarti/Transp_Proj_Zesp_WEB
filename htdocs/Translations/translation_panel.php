@@ -8,6 +8,8 @@
  *
  * Author       Bartosz M. Lewiński <jabarti@wp.pl>
  * ************************************************* */
+//include 'translation.css';
+
 //if (isset($_GET['jezyk'])) echo $_GET['jezyk'];
 
 $Temp_em = false;
@@ -26,25 +28,38 @@ if(isset($_GET['empty'])){
 }
 $empty = $_SESSION['empty'];
 
+if(isset($_GET['fragm'])){
+    $fragm = "AND `key` LIKE '%".$_GET['fragm']."%'";
+}else{
+    $fragm=''; 
+}
+
 $curr_lang = isset($_GET['jezyk']) ? $_GET['jezyk'] : $_SESSION['lang']; 
 //$sql = "SELECT * FROM `localization` WHERE `lang` = 'pl';";
-$sql = "SELECT * FROM `localization` WHERE `lang` = '".$curr_lang."' ".$empty." ORDER BY `localization`.`key` ASC;";
-//echo $sql;
+$sql = "SELECT * FROM `localization` WHERE (`lang` = '".$curr_lang."' ".$empty." ".$fragm.") ORDER BY `localization`.`key` ASC;";
+//echo '<br>SQL: '.$sql;
 $res = mysql_query($sql);
 
 ?>
-<form action="" method="get">
-    <select name=jezyk id="langchoser">
-        <option value="pl"><?php echo t("Polski")?></option>
+<div>
+<form id="langchoser" action="" method="get">
+    <select name=jezyk >
+        <option value="pl"><?php echo t("Polski")?></option> 
         <option value="en"><?php echo t("Angielski")?></option>
         <option value="se"><?php echo t("Szwedzki")?></option>
         <!--<option value="se"><?php echo t("Hiszpański")?></option>-->
     </select>
     <input type="submit" value="<?php t("Zmień język"); ?> =>">
+        
+<!--    <select name=jezyk id="langchoser" onchange="self.location.href = this.value">
+        <option value="?jezyk=pl"><?php echo t("Polski")?></option>      
+        <option value="?jezyk=en"><?php echo t("Angielski")?></option>
+        <option value="?jezyk=se"><?php echo t("Szwedzki")?></option>
+        <option value="?jezyk=??"><?php echo t("Hiszpański")?></option>
+    </select>-->
 </form>
 
-<div>
-    <form action="" method="get">
+    <form id="zawart" action="" method="get">
         <?php if($Temp_em == false){ ?>
                     <input type="hidden" name="val" value="puste">
                     <input type="submit" name="empty" value="<?php echo t("Wyświetl tylko puste"); ?>"/>
@@ -53,6 +68,11 @@ $res = mysql_query($sql);
                     <input type="submit" name="empty" value="<?php echo t("Wyświetl wszystkie"); ?>"/>
         <?php }?>
                     
+    </form>
+
+    <form id="szukacz" action="" method="get">
+         <input type="text" name="fragm" >
+         <input type="submit" value="<?php echo t("Znajdź"); ?>"/>          
     </form>
 </div>
 

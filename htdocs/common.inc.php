@@ -84,7 +84,7 @@ if (isset($_SESSION['user'])){
 if (!isset($_COOKIE['user'])){          // SKOŃCZYŁ SIE CZAS SESJI USERA
     unsetter();                         // really works?
     unset($_SESSION['uzytkID']);
-    echo ('Sesja usera wygasła');
+    echo t('Sesja usera wygasła');
 //    header('Location:'.HTTP_MODELS_PATH.'LoggOut_Mod.php');
     
 //    echo $_SESSION['uzytkID'];
